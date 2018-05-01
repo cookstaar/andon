@@ -19,7 +19,7 @@ app.use(bodyParser.json());
  * Endpoint to receive /helpdesk slash command from Slack.
  * Checks verification token and opens a dialog to capture more info.
  */
-app.post('/andon-test', (req, res) => {
+app.post('/andon', (req, res) => {
   // extract the verification token, slash command text,
   // and trigger ID from payload
   const { token, text, trigger_id, user_id } = req.body;
